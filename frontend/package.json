@@ -2,7 +2,7 @@
   "name": "recomendaciones-ia",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:4000",
+  "homepage": ".",                        
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build",          
+    "serve": "npx serve -s build",           
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,3 +39,4 @@
     ]
   }
 }
+

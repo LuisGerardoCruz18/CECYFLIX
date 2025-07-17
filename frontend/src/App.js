@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import peliculas from './data/peliculas.json';
 
+const API_URL = "https://recomendaciones-backend.onrender.com";
+
 function App() {
   const [input, setInput] = useState('');
   const [peliculasFiltradas, setPeliculasFiltradas] = useState(peliculas);
@@ -25,7 +27,7 @@ function App() {
     setPeliculasRecomendadas([]);
     setPeliculasFiltradas([]);
     try {
-      const response = await fetch('/api/recomendaciones', {
+      const response = await fetch(`${API_URL}/api/recomendaciones`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
